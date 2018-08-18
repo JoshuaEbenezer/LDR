@@ -41,12 +41,11 @@ def ldr(src_data, alpha, U):
 	            ref = in_Y[j-1,i-1]
 	            
 	            if j!=R:
-	                trg = in_Y[j,i-1]
-	                h2D_in[np.maximum(trg,ref),np.minimum(trg,ref)] = h2D_in[np.maximum(trg,ref),np.minimum(trg,ref)] + 1
-	            
+	                trg = in_Y[j,i-1]	            
 	            if i!=C:
 	                trg = in_Y[j-1,i]
-	                h2D_in[np.maximum(trg,ref),np.minimum(trg,ref)] = h2D_in[np.maximum(trg,ref),np.minimum(trg,ref)] + 1	                   
+			
+	            h2D_in[np.maximum(trg,ref),np.minimum(trg,ref)] = h2D_in[np.maximum(trg,ref),np.minimum(trg,ref)] + 1	                   
 	    del ref,trg
 
 
